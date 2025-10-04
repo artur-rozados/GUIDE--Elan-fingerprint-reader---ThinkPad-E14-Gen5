@@ -1,6 +1,5 @@
 ![OS](https://img.shields.io/badge/OS-Ubuntu_22.04+-blue.svg)
 ![Hardware](https://img.shields.io/badge/Hardware-ThinkPad_E14_Gen_5-red.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 # [GUIDE] Elan Fingerprint Reader (04f3:0c4b) on ThinkPad E14 Gen 5 for Linux
 
