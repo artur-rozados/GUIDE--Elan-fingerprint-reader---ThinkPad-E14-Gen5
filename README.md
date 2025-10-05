@@ -77,15 +77,15 @@ WARNING: A typo in this file can lock you out of your system. Please double-chec
 
 Second, remove the keyring's own password so applications can access it seamlessly.
 
-- **WARNING** This stores saved passwords unencrypted on disk. This is a common and low-risk trade-off if you already use full-disk encryption.
+## **WARNING** This stores saved passwords UNENCRYPTED on disk. This is a common and low-risk trade-off if you already use full-disk encryption.
 
-Open the Passwords and Keys application.
+- Open the Passwords and Keys application.
 
-Right-click the Login keyring and select Change Password.
+- Right-click the Login keyring and select Change Password.
 
-Enter your current password, then leave the new password fields blank and save. Acknowledge the security warning when it appears.
+- Enter your current password, then leave the new password fields blank and save. Acknowledge the security warning when it appears.
 
-Reboot your computer to apply the changes. The password prompts will now be gone.
+- Reboot your computer to apply the changes. The password prompts will now be gone.
 
 ---
 
