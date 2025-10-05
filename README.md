@@ -77,7 +77,7 @@ WARNING: A typo in this file can lock you out of your system. Please double-chec
 
 Second, remove the keyring's own password so applications can access it seamlessly.
 
-# **[WARNING] -** This stores saved passwords UNENCRYPTED on disk. This is a common and low-risk trade-off if you already use full-disk encryption.
+### **[WARNING] -** This stores saved passwords UNENCRYPTED on disk. This is a common and low-risk trade-off if you already use full-disk encryption.
 
 - Open the Passwords and Keys application.
 
