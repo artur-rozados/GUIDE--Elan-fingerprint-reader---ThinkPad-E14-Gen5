@@ -71,7 +71,9 @@ Add the following line to the very top of the file:
 
 WARNING: A typo in this file can lock you out of your system. Please double-check the line before saving.
 
-2. Remove the Keyring Password for Applications [WARNING]
+---
+
+### 2. Remove the Keyring Password for Applications [WARNING]
 
 Second, remove the keyring's own password so applications can access it seamlessly.
 
