@@ -23,7 +23,7 @@ Extract the .zip file. You will find a single driver file inside: `libfprint-2-t
 
 Open a terminal **inside the folder where you extracted that file** and run the following commands:
 
-# Install the required base library and packets
+# Install the required base library and packages
 sudo apt install libfprint-2-tod1 fprintd libpam-fprintd
 
 # Create the specific directory for this driver type
