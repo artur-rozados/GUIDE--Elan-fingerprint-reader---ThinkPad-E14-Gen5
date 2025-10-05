@@ -51,6 +51,42 @@ fprintd-list $USER
 
 The output should list your username and the "ELAN Fingerprint Sensor".
 
+---
+
+## Optional Tweak: Fixing Keyring Password Prompts
+
+After setting up your fingerprint reader, the system will still prompt for your password to unlock the "Login Keyring". Here is a concise, two-step fix for that.
+
+### 1. Allow Fingerprint Login to Unlock the Keyring
+
+First, configure the login process to accept your fingerprint as sufficient.
+
+Edit the file `/etc/pam.d/gdm-password`:
+
+sudo nano /etc/pam.d/gdm-password
+
+Add the following line to the very top of the file:
+
+auth       sufficient   pam_fprintd.so
+
+    Warning: A typo in this file can lock you out of your system. Please double-check the line before saving.
+
+2. Remove the Keyring Password for Applications [WARNING]
+
+Second, remove the keyring's own password so applications can access it seamlessly.
+
+- **WARNING** This stores saved passwords unencrypted on disk. This is a common and low-risk trade-off if you already use full-disk encryption.
+
+Open the Passwords and Keys application.
+
+Right-click the Login keyring and select Change Password.
+
+Enter your current password, then leave the new password fields blank and save. Acknowledge the security warning when it appears.
+
+Reboot your computer to apply the changes. The password prompts will now be gone.
+
+---
+
 ## TL;DR
 
 The Elan fingerprint reader (04f3:0c4b) on the ThinkPad E14 Gen 5 works on Ubuntu 22.04-based distros using the official Lenovo binary driver for the E14 Gen 4. Download it here: https://support.lenovo.com/us/en/downloads/ds560939-elan-fingerprint-driver-for-ubuntu-2204-thinkpad-e14-gen-4-e15-gen-4
