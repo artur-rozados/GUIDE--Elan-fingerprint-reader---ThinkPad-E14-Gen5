@@ -24,16 +24,16 @@ Extract the .zip file. You will find a single driver file inside: `libfprint-2-t
 Open a terminal **inside the folder where you extracted that file** and run the following commands:
 
 # Install the required base library and packages
-sudo apt install libfprint-2-tod1 fprintd libpam-fprintd
+`sudo apt install libfprint-2-tod1 fprintd libpam-fprintd`
 
 # Create the specific directory for this driver type
-sudo mkdir -p /usr/lib/x86_64-linux-gnu/libfprint-2/tod-1/
+`sudo mkdir -p /usr/lib/x86_64-linux-gnu/libfprint-2/tod-1/`
 
 # Copy the Lenovo driver into the system directory
-sudo cp libfprint-2-tod1-elan.so /usr/lib/x86_64-linux-gnu/libfprint-2/tod-1/
+`sudo cp libfprint-2-tod1-elan.so /usr/lib/x86_64-linux-gnu/libfprint-2/tod-1/`
 
 # Restart the fingerprint service to load the new driver
-sudo systemctl restart fprintd.service
+`sudo systemctl restart fprintd.service`
 
 ### 3. Enroll Your Fingerprint
 
@@ -47,7 +47,7 @@ Your fingerprint reader should now be working. You can enroll your finger throug
 ## How to Check if it Worked
 To verify that the system correctly sees your device, you can run:
 
-fprintd-list $USER
+`fprintd-list $USER`
 
 The output should list your username and the "ELAN Fingerprint Sensor".
 
@@ -63,13 +63,13 @@ First, configure the login process to accept your fingerprint as sufficient.
 
 Edit the file `/etc/pam.d/gdm-password`:
 
-sudo nano /etc/pam.d/gdm-password
+`sudo nano /etc/pam.d/gdm-password`
 
 Add the following line to the very top of the file:
 
-auth       sufficient   pam_fprintd.so
+`auth       sufficient   pam_fprintd.so`
 
-    Warning: A typo in this file can lock you out of your system. Please double-check the line before saving.
+WARNING: A typo in this file can lock you out of your system. Please double-check the line before saving.
 
 2. Remove the Keyring Password for Applications [WARNING]
 
